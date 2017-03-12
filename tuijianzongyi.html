@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<style>
+			#guanggao {
+				width: 950px;
+				height: 450px;
+				margin: -19px auto;
+				padding: 0;
+			}
+			
+			#daohang {
+				padding: 0;
+			}
+			
+			.juzhao {
+				width: 116px;
+				height: 156px;
+			}
+			
+			body {
+				background-image: url(img/background-image.gif);
+			}
+			footer {
+				background-color: #555555;
+				text-align: center;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			footer p {
+				color: #E1EDF7;
+			}
+		</style>
+		<style>
+			/* Custom Styles */
+			
+			ul.nav-tabs {
+				width: 140px;
+				margin-top: 20px;
+				border-radius: 4px;
+				border: 1px solid #ddd;
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+			}
+			
+			ul.nav-tabs li {
+				margin: 0;
+				border-top: 1px solid #ddd;
+			}
+			
+			ul.nav-tabs li:first-child {
+				border-top: none;
+			}
+			
+			ul.nav-tabs li a {
+				margin: 0;
+				padding: 8px 16px;
+				border-radius: 0;
+			}
+			
+			ul.nav-tabs li.active a,
+			ul.nav-tabs li.active a:hover {
+				color: #fff;
+				background: #0088cc;
+				border: 1px solid #0088cc;
+			}
+			
+			ul.nav-tabs li:first-child a {
+				border-radius: 4px 4px 0 0;
+			}
+			
+			ul.nav-tabs li:last-child a {
+				border-radius: 0 0 4px 4px;
+			}
+			
+			ul.nav-tabs.affix {
+				top: 30px;
+				/* Set the top position of pinned element */
+			}
+		</style>
+	</head>
+
+	<body data-spy="scroll" data-target="#myScrollspy">
+
+		<!--导航开始--->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showdianshiju.html">
+							电视剧<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showdianshiju.html">电视剧列表</a>
+							</li>
+							<li>
+								<a href="tuijiandianshiju.html">电视剧推荐</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showdianying.html">
+							电影<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showdianying.html">电影列表</a>
+							</li>
+							<li>
+								<a href="tuijiandianying.html">电影推荐</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showzongyi.html">
+							综艺<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showzongyi.html">综艺列表</a>
+							</li>
+							<li>
+								<a href="tuijianzongyi.html">综艺推荐</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a class="navbar-brand" data-toggle="modal" href="#loginModal">登录</a>
+						<a class="navbar-brand" href="register.html">注册</a>
+						<a class="navbar-brand" href="userhome.html">个人中心</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+		
+		<!--导航结束--->
+
+		<!--弹框开始-->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-title">
+						<center>
+							<h2>用户登录</h2></center>
+					</div>
+					<form class="bs-example bs-example-form" role="form">
+						<div class="modal-body">
+
+							<div class="input-group">
+								<span class="input-group-addon">用户名</span>
+								<input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名" required="required" />
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+								<input type="password" class="form-control" name="password" id="password" placeholder="请输入密码" required="required" />
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="input-group pull-right">
+								<button type="submit" class="btn btn-primary">提交</button>
+								<button class="btn btn-default" data-dismiss="modal">关闭</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--弹框结束--->
+		<div class="container">
+			<div class="jumbotron">
+				<h1>综艺节目推荐</h1>
+			</div>
+			<div class="row">
+				<div class="col-xs-3" id="myScrollspy">
+					<ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+						<li class="active">
+							<a href="#section-1">诛仙青云志</a>
+						</li>
+						<li>
+							<a href="#section-2">笑逐言开</a>
+						</li>
+						<li>
+							<a href="#section-3">今夜百乐门</a>
+						</li>
+						<li>
+							<a href="#section-4">爸爸去哪儿</a>
+						</li>
+						<li>
+							<a href="#section-5">火星情报局</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-9">
+					<h2 id="section-1">一年级毕业季</h2>
+					<img src="img/zongyi/0.jpg" class="juzhao" />
+					<p>主演: 张智霖/袁咏仪/陈建斌</p>
+					<p>地区: 内地</p>
+					<p>简介: 　从小学一年级到大学一年级，从懵懂天真到青春飞扬，今年，我们再次升级，迎来毕业季[威武]这是一个更加严峻的“战场”，他们不仅要面临毕业的压力，还要hold住来自整个娱乐圈的挑战[酷]甄别在继续，追梦不停步！谁能戴上学士帽顺利毕业勇闯演艺圈？[奥特曼]敬请期待10月22日湖南卫视《一年级·毕业季》</p>
+
+					<hr>
+					<h2 id="section-2">笑逐言开</h2>
+					<img src="img/zongyi/2.jpg" class="juzhao" />
+					<p>主演: 尉迟琳嘉</p>
+					<p>地区: 内地</p>
+					<p>简介: 《倾倾百老汇》升级啦！《笑逐言开》依然由凤凰卫视当家男神尉迟琳嘉主持。全新升级的新栏目将继续紧跟社会热点，天下大小事无所不包，或谈笑风生，或嬉笑怒骂，或能唱能演，或敢言敢玩。我们还将根据到场嘉宾的特点，度身设计当期节目主题，呈现出极具个人特色的内容和表现形式。</p>
+
+					<hr>
+					<h2 id="section-3">今夜百乐门</h2>
+					<img src="img/zongyi/3.jpg" class="juzhao" />
+					<p>主演: 金星/王祖蓝</p>
+					<p>地区: 内地</p>
+					<p>简介: 《今夜百乐门》是东方卫视将于2016年9月17日推出的场景喜剧综艺秀，金星为节目的主要嘴炮担当人，她将携手神秘大嘉宾带来欢乐冲击波。</p>
+
+					<hr>
+					<h2 id="section-4">爸爸去哪儿</h2>
+					<img src="img/zongyi/6.jpg" class="juzhao" />
+					<p>主演: 田亮/沙溢/林更新/蔡国庆/张伦硕/李锐/安吉/田宸宇/蔡轩正/严稚棱/黄致列/董力</p>
+					<p>地区: 内地</p>
+					<p>简介: 湖南卫视2016综艺节目安排。《爸爸去哪儿第四季》搬到三季度周六档。</p>
+
+					<hr>
+					<h2 id="section-5">火星情报局</h2>
+					<img src="img/zongyi/7.jpg" class="juzhao" />
+					<p>主演: 郭雪芙/薛之谦/钱枫/张俪/艾克里里/田源/杨迪/赵露思/刘维等</p>
+					<p>地区: 内地</p>
+					<p>简介: 由优酷携手银河酷娱打造的《火星情报局》最后一期节目已经上线，意味着横跨3个月的“星际穿越”将落下帷幕。不少网友陷入“失恋”阵线联盟，这也加大了他们对第二季的期待。 在最新一期节目中，副局长朱丹、高级特工沈梦辰甩掉高跟鞋解放天性;文静乖巧的郭雪芙“放肆”地提出要吃零食的要求，引起现场的零食争夺战。 更令人意想不到的是，合一集团总裁杨伟东亲自出镜，并饰演幕后大boss，派出刺客袭击火星情报局，绑走局长汪涵，让节目的走势深陷迷雾。 对此，优酷特地根据节目内容设置“有奖问答”环节，寻找专心收看节目的网友，通过千奇百怪的火星题目来考验网友，为寻找第二季现场特工做准备。</p>
+
+					<hr>
+				</div>
+			</div>
+		</div>
+		<!--脚部---->
+		<footer>
+			<center>
+				<p>make by ZH</p>
+			</center>
+		</footer>
+		<!--脚部---->
+		<script>
+			$(function() {
+				$("[data-toggle='popover']").popover();
+			});
+		</script>
+	</body>
+
+</html>

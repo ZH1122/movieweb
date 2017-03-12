@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<style>
+			#guanggao {
+				width: 950px;
+				height: 450px;
+				margin: -19px auto;
+				padding: 0;
+			}
+			
+			#daohang {
+				padding: 0;
+			}
+			
+			.juzhao {
+				width: 116px;
+				height: 156px;
+			}
+			body{
+				background-image: url(img/background-image.gif);
+			}
+			footer {
+				background-color: #555555;
+				text-align: center;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			footer p {
+				color: #E1EDF7;
+			}
+		</style>
+<style>
+/* Custom Styles */
+    ul.nav-tabs{
+        width: 140px;
+        margin-top: 20px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 0;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        color: #fff;
+        background: #0088cc;
+        border: 1px solid #0088cc;
+    }
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 30px; /* Set the top position of pinned element */
+    }
+</style>
+	</head>
+
+	<body data-spy="scroll" data-target="#myScrollspy">
+
+		<!--导航开始--->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showdianshiju.html">
+							电视剧<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showdianshiju.html">电视剧列表</a>
+							</li>
+							<li>
+								<a href="tuijiandianshiju.html">电视剧推荐</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showdianying.html">
+							电影<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showdianying.html">电影列表</a>
+							</li>
+							<li>
+								<a href="tuijiandianying.html">电影推荐</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showzongyi.html">
+							综艺<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showzongyi.html">综艺列表</a>
+							</li>
+							<li>
+								<a href="tuijianzongyi.html">综艺推荐</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a class="navbar-brand" data-toggle="modal" href="#loginModal">登录</a>
+						<a class="navbar-brand" href="register.html">注册</a>
+						<a class="navbar-brand" href="userhome.html">个人中心</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+		
+		<!--导航结束--->
+		
+		<!--弹框开始-->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-title">
+						<center>
+							<h2>用户登录</h2></center>
+					</div>
+					<form class="bs-example bs-example-form" role="form">
+						<div class="modal-body">
+
+							<div class="input-group">
+								<span class="input-group-addon">用户名</span>
+								<input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名" required="required" />
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+								<input type="password" class="form-control" name="password" id="password" placeholder="请输入密码" required="required" />
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="input-group pull-right">
+								<button type="submit" class="btn btn-primary">提交</button>
+								<button class="btn btn-default" data-dismiss="modal">关闭</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--弹框结束--->
+		<div class="container">
+   <div class="jumbotron">
+        <h1>电视剧推荐</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-3" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                <li class="active"><a href="#section-1">诛仙青云志</a></li>
+                <li><a href="#section-2">心理罪</a></li>
+                <li><a href="#section-3">美人私房菜</a></li>
+                <li><a href="#section-4">极品家丁</a></li>
+                <li><a href="#section-5">致命复活</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-9">
+            <h2 id="section-1">诛仙青云志(第二季)</h2>
+            <img src="img/dianshiju/1.jpg" class="juzhao" />
+            <p>导演: 朱锐斌</p>
+            <p>主演: 李易峰/赵丽颖/杨紫/成毅</p>
+            <p>地区: 内地</p>
+			<p>简介: 草庙村少年张小凡，在经历全村尽灭的惨案后，被青云门收归门下。为报答师恩，张小凡勤学苦炼，却因自身驽钝，一无所成。陷入迷茫与孤独境遇中的他，幸有鬼王之女碧瑶和好友林惊羽从旁安慰陪伴，渡过了人生最彷徨的阶段。张小凡与林惊羽、陆雪琪、曾书书等善良热血的少年们一道，帮助良善，斩妖除恶。一次次的坎坷磨难中张小凡逐渐成长，而与碧瑶的感情，也在患难与共中日渐深厚。然而，鬼王为复活兽神并颠覆青云，设下连环阴谋。张小凡悍然迎敌，就在命悬一刻之即，碧瑶舍身为他挡下致命的一剑，重伤昏迷，小凡带着沉睡的碧瑶流浪世间。鬼王死心不息，卷土重来，最终，张小凡以强大的勇气和信念，挫败鬼王，消弭了正反两派纠葛千年的过节，完成了少年时与碧瑶、林惊羽一众同伴们的约定。在少年们的共同努力之下，终换得山河锦绣如画，沃土千里绵延。</p>
+
+            <hr>
+<h2 id="section-2">心理罪(第二季)</h2>
+            <img src="img/dianshiju/2.jpg" class="juzhao" />
+            <p>导演: 程浩</p>
+            <p>主演: 陈若轩/王泷正/袁晶/彭渤</p>
+            <p>地区: 内地</p>
+			<p>简介: 公安局长邢至森中枪昏迷，女儿邢娜失踪，方木和邰伟兄弟二人火速追查，一桩拐卖妇女以社会名流为客户的二胎代孕案浮出水面。正紧急寻找邢娜时，前金牌运动员离奇奔跑致死、三个娱乐记者诡异同时自杀。经方木画像这是以正义之名教化社会的连环催眠杀人案</p>
+
+            <hr>
+            <h2 id="section-3">美人私房菜之玉蝶传奇</h2>
+            <img src="img/dianshiju/4.jpg" class="juzhao" />
+            
+            <p>导演: 梁辛全</p>
+            <p>主演: 郑爽/马天宇/蒋毅/苑琼丹/吴军忱/章贺/王纯</p>
+            <p>地区: 内地</p>
+			<p>简介: 宋朝某年, 由于皇帝治国有方，跟外族的战争处于暂时平息的状态，国内因此出现少有的和平盛世的，经济一时间出现繁荣昌盛。 杭州西子湖畔，宋五嫂(苑琼丹饰)以一手绝妙的厨艺创建了远近驰名的天香楼，并带大了女儿玉蝶(郑爽饰)和养子李马(马天宇饰)。这一年，李马学武归来，五嫂准备成全他们的婚事。适逢此时，微服私访的皇爷赵元卿(蒋毅饰)来到杭州，对玉蝶产生了一种特别的依恋难以自拔。一路跟随而来的金兵首领完颜泽利(吴其江饰)为了阻止赵元卿继承皇位，与太监宫全福(郭俊饰)内外勾结准备刺杀赵元卿。 这日李马路见不平，救下了校尉林觉(章贺饰)的妹妹林姬儿(王纯饰)，却因打伤运粮官被押回汴梁斩首。完颜泽利追杀赵元卿无果，为保万一火烧天香楼。赵元卿被侍卫所救，玉蝶因事不在天香楼因而逃过一劫，但是天香楼却化为一片灰烬。玉蝶以为宋五嫂而死，只好赶赴汴梁救李马。死里逃生的宋五嫂也从此颠沛流离，原本幸福的一家从此变得“家破人亡”。</p>
+
+            <hr>
+            <h2 id="section-4">极品家丁</h2>
+            <img src="img/dianshiju/5.jpg" class="juzhao" />
+            
+            <p>导演: 王为</p>
+            <p>主演: 陈赫/金晨/尹正/李溪芮/林思意/赵悦童/张瑞涵</p>
+            <p>地区: 内地</p>
+			<p>简介: 林晚荣因为一次意外，来到明朝宣德年间的金陵，见到了和去世的妹妹长得一模一样的萧家二小姐。找到寄托的林晚荣化名林三，进入萧府成为家丁，并和大小姐萧玉若发生种种摩擦。萧家在一系列意外下，陷入危机，但林三利用现代智慧一一解决，不仅化解重重危机，更得到了萧玉若的赏识，两人也在相 处中互生爱意。 在这过程中，林三发现萧家的危机并非意外，而是各方势力为了夺取萧家保管的先帝遗诏所致。林三八面逢源力挽狂澜，并被封为“天下第一丁”。</p>
+
+            <hr>
+            <h2 id="section-5">致命复活</h2>
+            <img src="img/dianshiju/9.jpg" class="juzhao" />
+            
+            <p>导演: 林志华</p>
+            <p>主演: 郭晋安/万绮雯/黄德斌/朱晨丽/王浩信/何雁诗</p>
+            <p>地区: 港台</p>
+			<p>简介: 故事背景以被绑架10年，后获救的故事为题。</p>
+
+            <hr>
+
+        </div>
+    </div>
+</div>
+		<!--脚部---->
+		<footer>
+			<center>
+				<p>make by ZH</p>
+			</center>
+		</footer>
+		<!--脚部---->
+		<script>
+			$(function() {
+				$("[data-toggle='popover']").popover();
+			});
+		</script>
+	</body>
+
+</html>

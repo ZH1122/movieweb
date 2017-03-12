@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<style>
+			#guanggao {
+				width: 950px;
+				height: 450px;
+				margin: -19px auto;
+				padding: 0;
+			}
+			
+			#daohang {
+				padding: 0;
+			}
+			
+			.juzhao {
+				width: 116px;
+				height: 156px;
+			}
+			
+			body {
+				background-image: url(img/background-image.gif);
+			}
+			
+			footer {
+				background-color: #555555;
+				text-align: center;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			footer p {
+				color: #E1EDF7;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<!--导航开始--->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showdianshiju.html">
+							电视剧<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showdianshiju.html">电视剧列表</a>
+							</li>
+							<li>
+								<a href="tuijiandianshiju.html">电视剧推荐</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showdianying.html">
+							电影<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showdianying.html">电影列表</a>
+							</li>
+							<li>
+								<a href="tuijiandianying.html">电影推荐</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="showzongyi.html">
+							综艺<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="showzongyi.html">综艺列表</a>
+							</li>
+							<li>
+								<a href="tuijianzongyi.html">综艺推荐</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a class="navbar-brand" data-toggle="modal" href="#loginModal">登录</a>
+						<a class="navbar-brand" href="register.html">注册</a>
+						<a class="navbar-brand" href="userhome.html">个人中心</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+
+		<!--导航结束--->
+		<!---轮播框开始--->
+		<div id="guanggao" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="guanggao" data-slide="0" class="active"></li>
+				<li data-target="guanggao" data-slide="1"></li>
+				<li data-target="guanggao" data-slide="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/fangyang.jpg">
+				</div>
+				<div class="item">
+					<img src="img/music2016.jpg" />
+				</div>
+				<div class="item">
+					<img src="img/nayinghua3.jpg" />
+				</div>
+			</div>
+			<a class="carousel-control left" href="#guanggao" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#guanggao" data-slide="next">&lsaquo;</a>
+		</div>
+		<!---轮播框结束--->
+		<!--弹框开始-->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-title">
+						<center>
+							<h2>用户登录</h2></center>
+					</div>
+					<form class="bs-example bs-example-form" role="form">
+						<div class="modal-body">
+
+							<div class="input-group">
+								<span class="input-group-addon">用户名</span>
+								<input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名" required="required" />
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+								<input type="password" class="form-control" name="password" id="password" placeholder="请输入密码" required="required" />
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="input-group pull-right">
+								<button type="submit" class="btn btn-primary">提交</button>
+								<button class="btn btn-default" data-dismiss="modal">关闭</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--弹框结束--->
+		<!--电视剧开始-->
+		<div class="dianying row">
+			<center>
+				<p>
+					<h2>推荐综艺</h2></p>
+			</center>
+			<div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/0.jpg" />
+					<center><button type="button" class="btn btn-default" title="青云志" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 李易峰/赵丽颖/杨紫/成毅">青云志</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/1.jpg" />
+					<center><button type="button" class="btn btn-default" title="微能力者" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 陈思宇/李思阳/熊欣/张驰/王子清/子望/更登彭措/侯昕炜/徐东">微能力者</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/2.jpg" />
+					<center><button type="button" class="btn btn-default" title="心理罪" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 陈若轩/王泷正/袁晶/彭渤">心理罪</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/3.jpg" />
+					<center><button type="button" class="btn btn-default" title="飞刀又见飞刀" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 刘恺威/杨蓉/黄明/吴映洁/关智斌/袁冰妍">飞刀又见飞刀</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/4.jpg" />
+					<center><button type="button" class="btn btn-default" title="美人私房菜" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 郑爽/马天宇/蒋毅/苑琼丹/吴军忱/章贺/王纯">美人私房菜</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/5.jpg" />
+					<center><button type="button" class="btn btn-default" title="极品家丁" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 陈赫/金晨/尹正/李溪芮/林思意/赵悦童/张瑞涵">极品家丁</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/6.jpg" />
+					<center><button type="button" class="btn btn-default" title="陈二狗的妖孽人生" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 赵炳锐/刘波/余思潞/王姿允/马翼/朱涵燕">陈二狗的妖孽人生</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianshiju/7.jpg" />
+					<center><button type="button" class="btn btn-default" title="全能侦探社" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 克里斯塔·巴科">全能侦探社</button></center>
+				</div>
+
+				<div class="col-lg-2"></div>
+			</div>
+		</div>
+		<!--电视剧结束-->
+
+		<!--电影开始-->
+		<div class="dianying row">
+			<center>
+				<p>
+					<h2>推荐电影</h2></p>
+			</center>
+			<div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/10.jpg" />
+					<center><button type="button" class="btn btn-default" title="咖啡公社" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 杰西·艾森伯格/克里斯汀·斯图尔特">咖啡公社</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/1.jpg" />
+					<center><button type="button" class="btn btn-default" title="毁灭者" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: Nathan Brookes / Bobby Lee Darby ">毁灭者</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/2.jpg" />
+					<center><button type="button" class="btn btn-default" title="佩小姐的奇幻城堡" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 阿萨·巴特菲尔德/伊娃·格林">佩小姐的奇幻城堡</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/3.jpg" />
+					<center><button type="button" class="btn btn-default" title="非常父子档" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 李治廷/金荷娜/文梅森/刘松仁/吕中/苑琼丹">非常父子档</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/4.jpg" />
+					<center><button type="button" class="btn btn-default" title="萨利机长" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 汤姆·汉克斯/艾伦·艾克哈特">萨利机长</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/5.jpg" />
+					<center><button type="button" class="btn btn-default" title="太空胶囊" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: Edmund/丽莎·格林伍德/Nigel">太空胶囊</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/6.jpg" />
+					<center><button type="button" class="btn btn-default" title="从你的全世界路过" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 邓超/白百何/杨洋/张天爱/岳云鹏/杜鹃/柳岩/廖学秋/曹卫宇/汪启楠/安韩瑾/潘肖/曹涤非/朱红/刘乐思/蓝可/梁超/张爱钦/张美娥">从你的全世界路过</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/dianying/7.jpg" />
+					<center><button type="button" class="btn btn-default" title="已是香港明日" data-container="body" data-toggle="popover" data-placement="bottom" data-content="主演: 杰米钟/布莱恩格林伯格/吴耀汉/Sarah/Lawrence">已是香港明日</button></center>
+				</div>
+
+				<div class="col-lg-2"></div>
+			</div>
+		</div>
+		<!--电影结束-->
+		<!--综艺开始-->
+		<div class="dianying row">
+			<center>
+				<p>
+					<h2>推荐综艺</h2></p>
+			</center>
+			<div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/0.jpg" />
+					<center><button type="button" class="btn btn-default" title="一年级" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">一年级</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/1.jpg" />
+					<center><button type="button" class="btn btn-default" title="快乐大本营" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">快乐大本营</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/2.jpg" />
+					<center><button type="button" class="btn btn-default" title="笑逐言开" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">笑逐言开</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/3.jpg" />
+					<center><button type="button" class="btn btn-default" title="今夜百乐门" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">今夜百乐门</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/4.jpg" />
+					<center><button type="button" class="btn btn-default" title="职来职往" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">职来职往</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/5.jpg" />
+					<center><button type="button" class="btn btn-default" title="非诚勿扰" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">非诚勿扰</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/6.jpg" />
+					<center><button type="button" class="btn btn-default" title="爸爸去哪儿" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">爸爸去哪儿</button></center>
+				</div>
+				<div class="col-lg-1">
+					<img class="juzhao" src="img/zongyi/7.jpg" />
+					<center><button type="button" class="btn btn-default" title="火星情报局" data-container="body" data-toggle="popover" data-placement="bottom" data-content="地区: 内地">火星情报局</button></center>
+				</div>
+
+				<div class="col-lg-2"></div>
+			</div>
+		</div>
+		<!--综艺结束-->
+		<!--脚部---->
+		<footer>
+			<center>
+				<p>make by ZH</p>
+			</center>
+		</footer>
+		<!--脚部---->
+		<script>
+			$(function() {
+				$("[data-toggle='popover']").popover();
+			});
+			$('.carousel').carousel();
+		</script>
+
+	</body>
+
+</html>
